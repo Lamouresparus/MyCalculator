@@ -18,4 +18,5 @@
     <string name="subtract">-</string>
     <string name="add">+</string>
     <string name="delete">DEL</string>
+    <string name="percent">%</string>
 </resources>

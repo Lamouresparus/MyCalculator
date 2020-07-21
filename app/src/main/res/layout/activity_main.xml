@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="Overdraw">
 
     <TextView
         android:id="@+id/values_tv"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
+        android:textDirection="anyRtl"
+        android:layoutDirection="rtl"
+        android:textAlignment="viewStart"
         android:textColor="@color/actionButton"
         android:layout_gravity="start"
         android:textSize="30sp"
         android:ellipsize="start"
         android:textIsSelectable="true"
         android:maxLines="2"
+        android:padding="16dp"
         />
 
     <TextView
         android:id="@+id/result_tv"
+        android:layoutDirection="rtl"
+        android:textAlignment="viewStart"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:textColor="@android:color/white"
         android:layout_gravity="start"
         android:ellipsize="start"
         android:textSize="40sp"
-        android:maxLines="2"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:padding="16dp"
         android:textIsSelectable="true"/>
 
     <LinearLayout
@@ -46,11 +54,21 @@
             android:id="@+id/clear_tv"
             style="@style/ActionButtonStyleOne"
             android:text="@string/clear"/>
+        <TextView
+            android:id="@+id/delete_tv"
+            style="@style/ActionButtonStyleOne"
+            android:text="@string/delete" />
 
         <TextView
             android:id="@+id/divide_tv"
             style="@style/ActionButtonStyleOne"
-            android:text="@string/divide"/>
+            android:text="@string/divide" />
+        <TextView
+            android:id="@+id/percent_tv"
+            style="@style/ActionButtonStyleTwo"
+            android:text="@string/percent"/>
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -154,14 +172,9 @@
             android:text="@string/zero"/>
 
         <TextView
-            android:id="@+id/delete_tv"
-            style="@style/NumbersButtonStyle"
-            android:text="@string/delete"/>
-
-        <TextView
             android:id="@+id/equals_tv"
             style="@style/EqualButtonStyle"
-            android:text="@string/equals"/>
+            android:text="@string/equals" />
 
     </LinearLayout>
     </LinearLayout>
